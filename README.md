@@ -31,7 +31,7 @@ Analytic overview across a customer base of 6,418 records:
   </tr>
 </table>
 For the full interactive Power BI dashboard, download the `.pbix` file here: 
-👉 [Download churn analysis.pbix](./churn%20analysis.pbix)      
+[churn analysis.pbix](./churn%20analysis.pbix)      
 
 5. SQL & Python Code Implementation       
 (1) SQL Data Engineering (Google BigQuery)     
