@@ -1,4 +1,6 @@
-1. Customer Churn Analysis & Predictive Modeling   
+<h1 align="center">Customer Churn Analysis & Predictive Modeling</h1>
+
+1. Project Introduction  
 An end-to-end data analytics and machine learning framework combining Google BigQuery SQL, a Random Forest Classifier in Python, and an interactive Power BI Dashboard to identify historical churn drivers and predict at-risk customers before they churn.
 
 2. Executive Summary & Key Metrics    
@@ -30,10 +32,9 @@ Analytic overview across a customer base of 6,418 records:
     </td>
   </tr>
 </table>
-*For the full interactive Power BI dashboard,  
-<b><a href="./churn%20analysis.pbix">Click here to download the interactive Power BI report (.pbix)</a></b>
-</p>  
 
+*For the full interactive Power BI dashboard, 
+<a href="./churn%20analysis.pbix">Click here to download the interactive Power BI report (.pbix)</a>.          
 
 5. SQL & Python Code Implementation       
 (1) SQL Data Engineering (Google BigQuery)     
