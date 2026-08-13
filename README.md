@@ -30,16 +30,18 @@ Analytic overview across a customer base of 6,418 records:
     </td>
   </tr>
 </table>
-For the full interactive Power BI dashboard, download the `.pbix` file here: 
-[churn analysis.pbix](./churn%20analysis.pbix)      
+*For the full interactive Power BI dashboard,  
+<b><a href="./churn%20analysis.pbix">Click here to download the interactive Power BI report (.pbix)</a></b>
+</p>  
+
 
 5. SQL & Python Code Implementation       
 (1) SQL Data Engineering (Google BigQuery)     
    Data quality checks, missing value imputations, and analytical view creations were performed directly in BigQuery.     
-   For the complete SQL script, see [ETL_Process_in_BigQuery.sql](./ETL_Process_in_BigQuery.sql).         
+   *For the complete SQL script, see [ETL_Process_in_BigQuery.sql](./ETL_Process_in_BigQuery.sql).         
 (2) Predictive Modeling & Machine Learning                     
    A Random Forest Classifier was trained on historical customer records (vw_ChurnData) and deployed on new onboarding customers (vw_JoinData) to score churn probabilities in advance, with Overall Accuracy: 85%.         
-    For the complete Python script, see [Churn Prediction.py](./Churn%20Prediction.py).    
+    *For the complete Python script, see [Churn Prediction.py](./Churn%20Prediction.py).    
   
  Model evaluation report (showing an accuracy of 85%).          
    <img width="433" height="167" alt="截屏2026-08-13 19 28 07" src="https://github.com/user-attachments/assets/b964f464-c5a6-40c8-900c-be1d57ec696b" />       
