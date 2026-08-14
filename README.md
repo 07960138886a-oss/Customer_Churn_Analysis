@@ -52,6 +52,6 @@ Churn feature importance chart (showing that "contract type" and "total charges"
 
   
 6. Strategic Recommendations     
-(1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 383 predicted churners before their first renewal cycle. The 383 customers identified as high-risk churners by the Random Forest model are provided in the [Prediction CSV file].(customer_churn_predictions.csv)  
+(1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 383 predicted churners before their first renewal cycle. The 383 customers identified as high-risk churners by the Random Forest model are provided in the [Predictions.csv](Predictions.csv).        
 (2) Contract Migration: Transition month-to-month accounts to annual contracts via bundle discounts to target the 46.5% churn segment.     
 (3) Competitive Pricing: Benchmark Fiber Optic pricing in high-churn regions (e.g., Uttar Pradesh and Tamil Nadu) to mitigate competitor defection.    
