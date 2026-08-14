@@ -33,16 +33,16 @@ Analytic overview across a customer base of 6,418 records:
   </tr>
 </table>
 
-*For the full interactive Power BI dashboard, 
+For the full interactive Power BI dashboard, 
 <a href="./churn%20analysis.pbix">Click here to download the interactive Power BI report (.pbix)</a>.          
 
 5. SQL & Python Code Implementation       
 (1) SQL Data Engineering (Google BigQuery)     
    Data quality checks, missing value imputations, and analytical view creations were performed directly in BigQuery.     
-   *For the complete SQL script, see [ETL_Process_in_BigQuery.sql](./ETL_Process_in_BigQuery.sql).         
+   For the complete SQL script, see [ETL_Process_in_BigQuery.sql](./ETL_Process_in_BigQuery.sql).         
 (2) Predictive Modeling & Machine Learning                     
    A Random Forest Classifier was trained on historical customer records (vw_ChurnData) and deployed on new onboarding customers (vw_JoinData) to score churn probabilities in advance, with Overall Accuracy: 85%.         
-    *For the complete Python script, see [Churn Prediction.py](./Churn%20Prediction.py).    
+    For the complete Python script, see [Churn Prediction.py](./Churn%20Prediction.py).    
   
  Model evaluation report (showing an accuracy of 85%).          
    <img width="433" height="167" alt="截屏2026-08-13 19 28 07" src="https://github.com/user-attachments/assets/b964f464-c5a6-40c8-900c-be1d57ec696b" />       
@@ -52,6 +52,6 @@ Churn feature importance chart (showing that "contract type" and "total charges"
 
   
 6. Strategic Recommendations     
-(1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 383 predicted churners before their first renewal cycle.     
+(1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 383 predicted churners before their first renewal cycle. The 383 customers identified as high-risk churners by the Random Forest model are provided in the [Prediction CSV file].(customer_churn_predictions.csv)  
 (2) Contract Migration: Transition month-to-month accounts to annual contracts via bundle discounts to target the 46.5% churn segment.     
 (3) Competitive Pricing: Benchmark Fiber Optic pricing in high-churn regions (e.g., Uttar Pradesh and Tamil Nadu) to mitigate competitor defection.    
