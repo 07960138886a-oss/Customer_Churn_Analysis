@@ -7,11 +7,11 @@ An end-to-end data analytics and machine learning framework combining Google Big
 Analytic overview across a customer base of 6,418 records:        
 （1）Key Metrics: 6,418 Total Customers | 411 New Joiners | 1,732 Total Churned | 27.0% Churn Rate.           
 （2）Primary Churn Drivers: Month-to-month contracts (46.53% churn rate), Competitor defection (44% of total churn), and Fiber Optic service vulnerabilities (41.10% churn rate).           
-（3）Predictive Impact: The trained model identified 383 high-risk new joiners (Predictions.csv), enabling targeted retention campaigns prior to account renewal.             
+（3）Predictive Impact: The trained model identified 380 high-risk new joiners (Predictions.csv), enabling targeted retention campaigns prior to account renewal.             
 
 3. Pipeline Architecture & Tech Stack                
-[ Raw Data ] ──> [ BigQuery SQL (ETL) ] ──> [ Production Views ] ──> [ Random Forest ML ] ──> [ Power BI Dashboard ]              
-(1) Data Warehouse: Google BigQuery (SQL)        
+[ Raw Data ] ──> [SQL (ETL) ] ──> [ Production Views ] ──> [ Random Forest ML ] ──> [ Power BI Dashboard ]              
+(1) Data Warehouse: SQL       
 (2) Machine Learning: Python (Pandas, Numpy, Seaborn, Matplotlib, Scikit-Learn)       
 (3) Business Intelligence: Power BI        
 
@@ -41,17 +41,28 @@ For the full interactive Power BI dashboard,
    Data quality checks, missing value imputations, and analytical view creations were performed directly in BigQuery.     
    For the complete SQL script, see [ETL_Process_in_BigQuery.sql](./ETL_Process_in_BigQuery.sql).         
 (2) Predictive Modeling & Machine Learning                     
-   A Random Forest Classifier was trained on historical customer records (vw_ChurnData) and deployed on new onboarding customers (vw_JoinData) to score churn probabilities in advance, with Overall Accuracy: 85%.         
-    For the complete Python script, see [Churn Prediction.py](./Churn%20Prediction.py).    
-  
- Model evaluation report (showing an accuracy of 85%).          
-   <img width="433" height="167" alt="截屏2026-08-13 19 28 07" src="https://github.com/user-attachments/assets/b964f464-c5a6-40c8-900c-be1d57ec696b" />       
-   
-Churn feature importance chart (showing that "contract type" and "total charges" are the key factors driving customer churn).       
-   <img width="4246" height="1634" alt="feature_importance" src="https://github.com/user-attachments/assets/2f45af21-146e-4a9a-a02e-445ef50cd288" />      
+  (2) Predictive Modeling & Machine Learning
+A Random Forest Classifier was trained on historical customer records (vw_ChurnData) and deployed on new onboarding customers (vw_JoinData) to score churn probabilities in advance, with Overall Accuracy: 85%.
+<p align="center">
+<img width="500" alt="accuracy" src="https://github.com/user-attachments/assets/b964f464-c5a6-40c8-900c-be1d57ec696b" />
+</p>
+To improve model robustness and predictive performance, feature importance analysis was conducted to identify the most influential predictors. Features with an importance score below 0.01 were removed to reduce noise and simplify the model.
+<p align="center">
+<img width="700" alt="feature_importance" src="https://github.com/user-attachments/assets/2f45af21-146e-4a9a-a02e-445ef50cd288" />
+</p>
+The refined model was then evaluated using 5-fold stratified cross-validation and multiple performance metrics, including Accuracy, Precision, Recall, F1-score and ROC-AUC. After feature selection and cross-validation, the final model achieved a Test ROC-AUC of 0.9037, showing exceptional performance in distinguishing churned customers from non-churned ones with low false-positive rates.
+<p align="center">
+<img width="600" alt="roc_auc" src="https://github.com/user-attachments/assets/d0427459-ee06-4399-85ca-f9f26c206c61" />
+</p>
+The model was subsequently applied to new onboarding customers to generate individual churn probabilities and rank customers by predicted churn risk, supporting targeted retention strategies and proactive intervention.
+
+For the complete Python script, see [Churn Prediction.py](./Churn%20Prediction.py).      
+
 
   
-6. Strategic Recommendations     
-(1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 383 predicted churners before their first renewal cycle. The 383 customers identified as high-risk churners by the Random Forest model are provided in the [Predictions.csv](Predictions.csv).        
+ 
+  
+7. Strategic Recommendations     
+(1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 380 predicted churners before their first renewal cycle. The 383 customers identified as high-risk churners by the Random Forest model are provided in the [Predictions.csv](Predictions.csv).        
 (2) Contract Migration: Transition month-to-month accounts to annual contracts via bundle discounts to target the 46.5% churn segment.     
 (3) Competitive Pricing: Benchmark Fiber Optic pricing in high-churn regions (e.g., Uttar Pradesh and Tamil Nadu) to mitigate competitor defection.    
