@@ -1,3 +1,4 @@
+
 <h1 align="center">Customer Churn Analysis & Predictive Modeling</h1>
 
 1. Project Introduction  
@@ -52,7 +53,7 @@ To improve model robustness and predictive performance, feature importance analy
 </p>
 The refined model was then evaluated using 5-fold stratified cross-validation and multiple performance metrics, including Accuracy, Precision, Recall, F1-score and ROC-AUC. After feature selection and cross-validation, the final model achieved a Test ROC-AUC of 0.9037, showing exceptional performance in distinguishing churned customers from non-churned ones with low false-positive rates.
 <p align="center">
-<img width="600" alt="roc_auc" src="https://github.com/user-attachments/assets/d0427459-ee06-4399-85ca-f9f26c206c61" />
+<img width="690" height="390" alt="截屏2026-08-16 00 13 49" src="https://github.com/user-attachments/assets/180f35df-0f54-43ea-b37c-dbb693ddc5a6" />
 </p>
 The model was subsequently applied to new onboarding customers to generate individual churn probabilities and rank customers by predicted churn risk, supporting targeted retention strategies and proactive intervention.
 
@@ -62,7 +63,7 @@ For the complete Python script, see [Churn Prediction.py](./Churn%20Prediction.p
   
  
   
-7. Strategic Recommendations     
+6. Strategic Recommendations     
 (1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 380 predicted churners before their first renewal cycle. The 383 customers identified as high-risk churners by the Random Forest model are provided in the [Predictions.csv](Predictions.csv).        
 (2) Contract Migration: Transition month-to-month accounts to annual contracts via bundle discounts to target the 46.5% churn segment.     
 (3) Competitive Pricing: Benchmark Fiber Optic pricing in high-churn regions (e.g., Uttar Pradesh and Tamil Nadu) to mitigate competitor defection.    
