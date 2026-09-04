@@ -64,6 +64,6 @@ For the complete Python script, see [Churn Prediction.py](./Churn%20Prediction.p
  
   
 6. Strategic Recommendations     
-(1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 380 predicted churners before their first renewal cycle. The 383 customers identified as high-risk churners by the Random Forest model are provided in the [Predictions.csv](Predictions.csv).        
+(1) Proactive Retention: Launch personalized contract-upgrade campaigns for the 380 predicted churners before their first renewal cycle. The 380 customers identified as high-risk churners by the Random Forest model are provided in the [Predictions.csv](Predictions.csv).        
 (2) Contract Migration: Transition month-to-month accounts to annual contracts via bundle discounts to target the 46.5% churn segment.     
 (3) Competitive Pricing: Benchmark Fiber Optic pricing in high-churn regions (e.g., Uttar Pradesh and Tamil Nadu) to mitigate competitor defection.    
