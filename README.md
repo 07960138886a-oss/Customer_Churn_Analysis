@@ -42,7 +42,6 @@ For the full interactive Power BI dashboard,
    Data quality checks, missing value imputations, and analytical view creations were performed directly in BigQuery.     
    For the complete SQL script, see [ETL_Process_in_BigQuery.sql](./ETL_Process_in_BigQuery.sql).         
 (2) Predictive Modeling & Machine Learning                     
-  (2) Predictive Modeling & Machine Learning
 A Random Forest Classifier was trained on historical customer records (vw_ChurnData) and deployed on new onboarding customers (vw_JoinData) to score churn probabilities in advance, with Overall Accuracy: 85%.
 <p align="center">
 <img width="500" alt="accuracy" src="https://github.com/user-attachments/assets/b964f464-c5a6-40c8-900c-be1d57ec696b" />
